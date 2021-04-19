@@ -12,3 +12,6 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
 * Have CPU Virtualization enabled on your Bios
 * Windows 10 Pro version 1903 or higher
 * WSL 2 Setup - [Install Windows Subsystem for Linux (WSL) on Windows 10 | Microsoft Docs](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
+
+## Docker Install
+* [Install Docker Desktop on Windows](https://docs.docker.com/docker-for-windows/install/)
