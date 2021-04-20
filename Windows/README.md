@@ -38,23 +38,15 @@
         "azure-cli-telemetry": "1.0.6",
         "extensions": {}
       }
-4. Verify VSCode is installed
-5. Download Windows-Linux Container Demo repository
-    * ``` Powershell
-      Invoke-WebRequest -Uri https://github.com/lukearp/Windows-Linux-Container-Demo/archive/refs/heads/master.zip -Method Get -OutFile Windows-Linux-Container-Demo.zip;
-      Expand-Archive -Path .\Windows-Linux-Container-Demo.zip -DestinationPath .\;
-      cd .\Windows-Linux-Container-Demo-master\;
-      code .;
-    If successful, VS Code should launch in the Directory of the project.  
-6. Login to Azure CLI
+4. Login to Azure CLI
     * ``` Powershell
       az login
-7. Select Target Azure Subscription for Azure Container Registry
+5. Select Target Azure Subscription for Azure Container Registry
     * ``` Powershell
       az account set --subscription SUBSCRIPTION-ID
-8. Create new Resource Group
+6. Create new Resource Group
     * ``` Powershell
       az group create --name RESOURCEGROUPNAME --location AZUREREGION
-9. Create [Azure Container Registry (ACR)](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-intro)
+7. Create [Azure Container Registry (ACR)](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-intro)
     * ``` Powershell
       az acr create --resource-group RESOURCEGROUPNAME --name ACRNAME --sku Standard
