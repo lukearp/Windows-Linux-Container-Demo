@@ -20,7 +20,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
 * [VS Code](https://code.visualstudio.com/Download#)
 
 ## Download Repository
-* * ``` Powershell
+* ``` Powershell
       Invoke-WebRequest -Uri https://github.com/lukearp/Windows-Linux-Container-Demo/archive/refs/heads/master.zip -Method Get -OutFile Windows-Linux-Container-Demo.zip;
       Expand-Archive -Path .\Windows-Linux-Container-Demo.zip -DestinationPath .\;
       cd .\Windows-Linux-Container-Demo-master\;
