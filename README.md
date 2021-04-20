@@ -25,4 +25,5 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
       Expand-Archive -Path .\Windows-Linux-Container-Demo.zip -DestinationPath .\;
       cd .\Windows-Linux-Container-Demo-master\;
       code .;
+
     If VS Code installed, program should launch in the Directory of the project.
