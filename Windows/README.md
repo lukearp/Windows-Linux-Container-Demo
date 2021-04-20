@@ -24,6 +24,7 @@
          Experimental:     false
 
 2. Verify Docker is running in Windows Mode:
+
     ![Windows Run](https://github.com/lukearp/Windows-Linux-Container-Demo/blob/master/Windows/imgs/docker-mode.png?raw=true)
 
     If the option says Switch to Linux, you are running in Windows Mode.  If it says Switch to Windows, select to change to Windows Mode.
