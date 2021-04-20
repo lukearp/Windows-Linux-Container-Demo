@@ -51,7 +51,7 @@
     * ``` Powershell
       az acr create --resource-group RESOURCEGROUPNAME --name ACRNAME --sku Standard
 
-## Builds
+# Builds
 1. Login to ACR
     * ``` Powershell
       az acr login -n ACRNAME
