@@ -50,3 +50,32 @@
 7. Create [Azure Container Registry (ACR)](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-intro)
     * ``` Powershell
       az acr create --resource-group RESOURCEGROUPNAME --name ACRNAME --sku Standard
+
+## Builds
+1. Login to ACR
+    * ``` Powershell
+      az acr login -n ACRNAME
+2. Locally Build Container
+    * ``` Powershell
+      cd .\Builds\dotnetframework
+      docker build -f Dockerfile.windowsservercore-ltcs2019 -t CONTAINERNAME:TAG .
+3. Verify build is in Docker Images
+    * ``` Powershell
+      docker images
+4. Run container Locally
+    * ``` Powershell
+      docker run -d -p 8080:80 CONTAINERNAME:TAG
+5. Verify application is working by browsing to site: [Default Location](http://localhost:8080)
+6. Tag container and push to ACR
+    * ``` Powershell
+      docker tag CONTAINERNAME:TAG ACRNAME.azurecr.io/CONTAINERNAME:TAG
+      docker push ACRNAME.azurecr.io/CONTAINERNAME:TAG
+7. Verify Repository is there:
+    * ``` Powershell
+      az acr repository list -n ACRNAME --output table
+
+## Build with Azure CLI
+1. Replace docker build with az acr build:
+    * ``` Powershell
+      az acr build -t ACRNAME.azurecr.io/CONTAINERNAME:TAG -r ACRNAME --platform windows/x86
+      az acr repository list -n ACRNAME --output table
