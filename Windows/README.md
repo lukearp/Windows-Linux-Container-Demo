@@ -75,7 +75,7 @@
       az acr repository list -n ACRNAME --output table
 
 ## Build with Azure CLI
-1. Replace docker build with az acr build:
+1. Replace docker build with az acr build to offload to Azure Container Registry:
     * ``` Powershell
-      az acr build -t ACRNAME.azurecr.io/CONTAINERNAME:TAG -r ACRNAME --platform windows/x86
+      az acr build -t ACRNAME.azurecr.io/CONTAINERNAME:TAG -r ACRNAME -f .\Dockerfile.windowsservercore-ltcs2019 --platform windows .
       az acr repository list -n ACRNAME --output table
