@@ -50,6 +50,8 @@
 7. Create [Azure Container Registry (ACR)](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-intro)
     * ``` Powershell
       az acr create --resource-group RESOURCEGROUPNAME --name ACRNAME --sku Standard
+8. Assign [ACR Roles](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-roles) to users that will be managing containers:
+   ![RBAC](https://github.com/lukearp/Windows-Linux-Container-Demo/blob/master/Windows/imgs/RBAC.PNG?raw=true)
 
 # Builds
 1. Login to ACR
